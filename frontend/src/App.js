@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import ServicesSection from './components/ServicesSection';
 import './App.css';
 
 function App() {
@@ -60,7 +61,7 @@ function App() {
                 </div>
             </div>
         </section>
-
+        <ServicesSection />
       </main>
 
       {/* Footer */}
