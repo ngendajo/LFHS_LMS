@@ -1,0 +1,115 @@
+:root {
+  --primary-snow: #F7FCFF;
+  --primary-dark-gray: #252C37;
+  --secondary-light-blue: #C4E9EC;
+  --accent-light-orange: #F3D0B3;
+  --highlight-dark-green: #273316;
+}
+
+body {
+  background-color: var(--secondary-light-blue);
+}
+
+.navbar {
+  background-color: var(--primary-snow);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--primary-dark-gray) !important;
+}
+
+.nav-link:hover {
+  color: var(--highlight-dark-green) !important;
+}
+
+.btn-login {
+  background-color: var(--highlight-dark-green);
+  color: var(--primary-snow);
+  border: none;
+}
+
+.btn-register {
+  background-color: var(--accent-light-orange);
+  color: var(--primary-dark-gray);
+  border: none;
+}
+
+.btn-login:hover, .btn-register:hover {
+  opacity: 0.6;
+}
+
+.navbar-toggler {
+  border-color: var(--primary-dark-gray);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(37, 44, 55, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* css for hero section */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 500px;
+  background-image: url('./images/hero.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  
+}
+
+.hero-content {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  text-align: center;
+  color: var(--primary-dark-gray);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  background-color: var(--accent-light-orange);
+  color: var(--primary-dark-gray);
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+}
+
+.btn-hero:hover {
+  background-color: var(--highlight-dark-green);
+  color: var(--primary-snow);
+}
+footer {
+  color: var(--primary-dark-gray);
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--highlight-dark-green);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent-light-orange);
+}
+
+.social-icons a {
+  color: var(--primary-dark-gray);
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: var(--highlight-dark-green);
+}
