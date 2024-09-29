@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: var(--secondary-light-blue);
+  background-color: var(--primary-dark-gray);
 }
 
 .navbar {
@@ -51,7 +51,7 @@ body {
   position: relative;
   height: 90vh;
   min-height: 500px;
-  background-image: url('./images/hero.png');
+  /* background-image: url('./images/hero.png'); */
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
@@ -64,7 +64,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%); */
   text-align: center;
-  color: var(--primary-dark-gray);
+  color: var(--primary-snow);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -91,12 +91,12 @@ body {
   color: var(--primary-snow);
 }
 footer {
-  color: var(--primary-dark-gray);
+  color: var(--primary-snow);
   margin-top: auto;
 }
 
 footer a {
-  color: var(--highlight-dark-green);
+  color: var(--primary-snow);
   text-decoration: none;
 }
 
@@ -105,7 +105,7 @@ footer a:hover {
 }
 
 .social-icons a {
-  color: var(--primary-dark-gray);
+  color: var(--primary-snow);
   font-size: 1.5rem;
   margin-right: 10px;
 }
