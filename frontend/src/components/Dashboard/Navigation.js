@@ -6,7 +6,7 @@ const Navigation = () => {
 
   return (
     <nav className="navbar navbar-expand-lg" style={{ backgroundColor: 'var(--primary-dark-gray)', color: 'var(--primary-snow)' }}>
-      <div className="container-fluid">
+      <div className="container">
         <Link className="navbar-brand" to="/" style={{ color: 'var(--primary-snow)' }}>
           <img src={require('../../images/convetion.jpeg')} alt="Logo" width="30" height="30" className="d-inline-block align-text-top me-2" />
           Dashboard
