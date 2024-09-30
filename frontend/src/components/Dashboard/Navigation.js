@@ -12,21 +12,31 @@ const Navigation = () => {
           Dashboard
         </Link>
         <div className="ms-auto">
-          <div className="dropdown">
-            <div 
-              className="d-flex align-items-center" 
-              onMouseEnter={() => setShowProfileMenu(true)}
-              onMouseLeave={() => setShowProfileMenu(false)}
-            >
+          <div 
+            className="profile-container" 
+            onMouseEnter={() => setShowProfileMenu(true)}
+            onMouseLeave={() => setShowProfileMenu(false)}
+            style={{ position: 'relative' }} 
+          >
+            <div className="d-flex align-items-center">
               <img src={require('../../images/convetion.jpeg')} alt="Profile" width="40" height="40" className="rounded-circle me-2" />
               <span>John Doe</span>
-              {showProfileMenu && (
-                <div className="dropdown-menu show" style={{ backgroundColor: 'var(--accent-light-orange)' }}>
-                  <Link className="dropdown-item" to="/manage-app">Manage App</Link>
-                  <Link className="dropdown-item" to="/logout">Logout</Link>
-                </div>
-              )}
             </div>
+            {showProfileMenu && (
+              <div
+                className="dropdown-menu show" 
+                style={{ 
+                  position: 'absolute',  // Absolute positioning
+                  top: '100%',            // Position the dropdown below the profile
+                  left: 0,                // Align it to the left
+                  zIndex: 1000,           // Ensure it's above other elements
+                  backgroundColor: 'var(--accent-light-orange)' 
+                }}
+              >
+                <Link className="dropdown-item" to="/manage-app">Manage App</Link>
+                <Link className="dropdown-item" to="/logout">Logout</Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

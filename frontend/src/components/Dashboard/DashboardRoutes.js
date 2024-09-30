@@ -8,6 +8,9 @@ const Dashboard = () => {
   return (
     <div className="dashboard" style={{ backgroundColor: 'var(--primary-snow)' }}>
       <Navigation />
+      <div class="text-center mt-4">
+        <h1 class="fw-bold">School Management System</h1>
+      </div>
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-3" style={{ backgroundColor: 'var(--secondary-light-blue)' }}>
