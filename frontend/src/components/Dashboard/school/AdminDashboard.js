@@ -102,7 +102,7 @@ const AdminDashboard = () => {
     { name: 'Scheduling and Timetables', icon: <FaCalendarAlt /> },
     { name: 'Resource Management', icon: <FaBoxes /> },
     { name: 'Settings', icon: <FaCog /> },
-    { name: 'Support and Helpdesk', icon: <FaQuestionCircle /> },
+    { name: 'Helpdesk', icon: <FaQuestionCircle /> },
   ];
 
   const toggleSidebar = () => {
