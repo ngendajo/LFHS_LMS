@@ -8,7 +8,7 @@ const Navigation = () => {
     <nav className="navbar navbar-expand-lg" style={{ backgroundColor: 'var(--primary-dark-gray)', color: 'var(--primary-snow)' }}>
       <div className="container">
         <Link className="navbar-brand" to="/" style={{ color: 'var(--primary-snow)' }}>
-          <img src={require('../../images/convetion.jpeg')} alt="Logo" width="30" height="30" className="d-inline-block align-text-top me-2" />
+          <img src={require('../../../images/convetion.jpeg')} alt="Logo" width="30" height="30" className="d-inline-block align-text-top me-2" />
           Dashboard
         </Link>
         <div className="ms-auto">
@@ -19,7 +19,7 @@ const Navigation = () => {
             style={{ position: 'relative' }} 
           >
             <div className="d-flex align-items-center">
-              <img src={require('../../images/convetion.jpeg')} alt="Profile" width="40" height="40" className="rounded-circle me-2" />
+              <img src={require('../../../images/convetion.jpeg')} alt="Profile" width="40" height="40" className="rounded-circle me-2" />
               <span>John Doe</span>
             </div>
             {showProfileMenu && (

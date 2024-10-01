@@ -23,7 +23,7 @@ const SchoolList = () => {
                     <Link to={`/dashboard/school/${school.id}`} className="text-decoration-none">
                       <div className="d-flex align-items-center">
                         <img 
-                          src={require('../../images/convetion.jpeg')} 
+                          src={require('../../../images/convetion.jpeg')} 
                           alt={`${school.name} logo`} 
                           className="rounded-circle me-3" 
                           style={{width: '50px', height: '50px', objectFit: 'cover'}} 

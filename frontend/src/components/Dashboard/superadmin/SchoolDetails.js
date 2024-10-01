@@ -23,7 +23,7 @@ const SchoolDetails = () => {
     <div className="container mt-4">
       <div className="row align-items-center mb-4 bg-light p-3 rounded-lg shadow-sm">
         <div className="col-auto">
-          <img src={require('../../images/convetion.jpeg')} alt="School Logo" className="img-fluid rounded-circle" style={{width: '60px', height: '60px', objectFit: 'cover'}} />
+          <img src={require('../../../images/convetion.jpeg')} alt="School Logo" className="img-fluid rounded-circle" style={{width: '60px', height: '60px', objectFit: 'cover'}} />
         </div>
         <div className="col">
           <h2 className="mb-0 text-primary">{schoolInfo.name}</h2>
