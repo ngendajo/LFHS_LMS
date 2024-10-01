@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { Navbar, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { 
   FaChartLine, FaUsers, FaBook, FaChartBar, FaBullhorn, 
-  FaCalendarAlt, FaBoxes, FaCog, FaQuestionCircle, FaBars, FaUserCircle, FaCaretDown
+  FaCalendarAlt, FaBoxes, FaCog, FaQuestionCircle, FaBars, FaUserCircle, FaCaretDown,
+  FaChalkboardTeacher, FaUserGraduate
 } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DashboardOverview from './DashboardOverview';
@@ -96,7 +97,14 @@ const AdminDashboard = () => {
 
   const menuItems = [
     { name: 'Dashboard Overview', icon: <FaChartLine /> },
-    { name: 'User Management', icon: <FaUsers /> },
+    { 
+      name: 'User Management', 
+      icon: <FaUsers />,
+      subItems: [
+        { name: 'Teachers', icon: <FaChalkboardTeacher /> },
+        { name: 'Students', icon: <FaUserGraduate /> }
+      ]
+    },
     { name: 'Course Management', icon: <FaBook /> },
     { name: 'Reports and Analytics', icon: <FaChartBar /> },
     { name: 'Scheduling and Timetables', icon: <FaCalendarAlt /> },
@@ -117,12 +125,15 @@ const AdminDashboard = () => {
     switch(selectedComponent) {
       case 'Dashboard Overview':
         return <DashboardOverview />;
+      case 'Teachers':
+        return <h2>Teachers Management</h2>;
+      case 'Students':
+        return <h2>Students Management</h2>;
       // ... other cases for different menu items
       default:
         return <h2>{selectedComponent}</h2>;
     }
   };
-
 
   return (
     <>
@@ -160,7 +171,7 @@ const AdminDashboard = () => {
         </Navbar>
 
         <div className="d-flex flex-grow-1">
-        <Sidebar collapsed={collapsed} className="custom-sidebar">
+          <Sidebar collapsed={collapsed} className="custom-sidebar">
             <Menu>
               <MenuItem
                 icon={<FaBars />}
@@ -170,14 +181,29 @@ const AdminDashboard = () => {
                 {collapsed ? '' : ''}
               </MenuItem>
               {menuItems.map((item) => (
-                <MenuItem
-                  key={item.name}
-                  icon={item.icon}
-                  onClick={() => handleMenuItemClick(item.name)}
-                  className={selectedComponent === item.name ? 'ps-active' : ''}
-                >
-                  {item.name}
-                </MenuItem>
+                item.subItems ? (
+                  <SubMenu key={item.name} icon={item.icon} label={item.name}>
+                    {item.subItems.map((subItem) => (
+                      <MenuItem
+                        key={subItem.name}
+                        icon={subItem.icon}
+                        onClick={() => handleMenuItemClick(subItem.name)}
+                        className={selectedComponent === subItem.name ? 'ps-active' : ''}
+                      >
+                        {subItem.name}
+                      </MenuItem>
+                    ))}
+                  </SubMenu>
+                ) : (
+                  <MenuItem
+                    key={item.name}
+                    icon={item.icon}
+                    onClick={() => handleMenuItemClick(item.name)}
+                    className={selectedComponent === item.name ? 'ps-active' : ''}
+                  >
+                    {item.name}
+                  </MenuItem>
+                )
               ))}
             </Menu>
           </Sidebar>
